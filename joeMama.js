@@ -71,7 +71,7 @@ var drawArray = function(classData,xScale,yScale,cScale){
         return xScale(index)
     })
     .y(function(num){return yScale(num)})
-    .curve(d3.curveNatural)
+    .curve(d3.curveCardinal)
     
     arrays.datum(function(obj){return quiz(obj)})
         .append('path')
