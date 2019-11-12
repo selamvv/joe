@@ -7,7 +7,8 @@ promise.then(function(joe){
 function(mama){
     console.log("joeMama",mama)
 })
-var screen = {width: 400, height: 500};
+
+var screen = {width: 1280, height: 720};
 var margins = {top: 10, right: 50, bottom: 50, left: 50};
 
 var setup = function(classData){
@@ -61,7 +62,7 @@ var drawArray = function(classData,xScale,yScale,cScale){
                 .attr("fill", "none")
                 .attr("stroke", function(arr){
                     console.log("arr", arr.picture)
-                    return cScale(arr);
+                    return cScale(arr.picture);
                 })
                 .attr("stroke-width", 3)
     
@@ -72,9 +73,9 @@ var drawArray = function(classData,xScale,yScale,cScale){
     .y(function(num){return yScale(num)})
     .curve(d3.curveNatural)
     
-    arrays.datum(function(obj){
-        return quiz(obj);
-    })
+    arrays.datum(function(obj){return quiz(obj)})
+        .append('path')
+        .attr("d", lineGenerator)
 }
 
 var quiz = function(pen){
