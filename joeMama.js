@@ -9,7 +9,7 @@ function(mama){
 })
 
 var screen = {width: 1280, height: 720};
-var margins = {top: 10, right: 50, bottom: 50, left: 50};
+var margins = {top: 30, right: 50, bottom: 50, left: 50};
 
 var setup = function(classData){
     d3.select("svg")
