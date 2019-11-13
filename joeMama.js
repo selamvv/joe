@@ -65,6 +65,11 @@ var drawArray = function(classData,xScale,yScale,cScale){
                     return cScale(arr.picture);
                 })
                 .attr("stroke-width", 3)
+    //          .on("mouseover", function(d,i){
+                    //d3.select("g").append("text")
+                    //.text(d.x)
+                    //  .attr("x", x(d.x))
+      //  .attr("y", y(d.y)); 
     
     var lineGenerator = d3.line()
     .x(function(num, index){
